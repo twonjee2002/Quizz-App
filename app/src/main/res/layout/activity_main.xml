@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
     android:paddingLeft="16dp"
-    android:paddingTop="16dp"
     android:paddingRight="16dp"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:id="@+id/activity_main"
-    android:background="#979">
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginBottom="20dp">
-
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.android.quizapp.MainActivity">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,9 +16,7 @@
             android:textSize="26sp"
             android:layout_alignParentLeft ="true"
             android:id="@+id/score_text"/>
-
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
@@ -42,18 +24,25 @@
             android:layout_alignParentRight ="true"
             android:id="@+id/score"/>
 
-    </RelativeLayout>
-    <TextView
-        android:id="@+id/question_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/score_text"
-        android:layout_marginTop="8dp"
-        android:inputType="text"
-        android:text="1.What is the capital city of Kenya?"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linear_main"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="45dp"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/question_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_text"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:text="1.What is the capital city of Kenya?"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
     <RadioGroup
         android:id="@+id/radio_group1"
         android:layout_width="wrap_content"
@@ -72,28 +61,32 @@
             android:id="@+id/city_choice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mombasa"
-            android:onClick="onCountryButtonClicked"/>
+            android:text="Mombasa" />
 
         <RadioButton
             android:id="@+id/city_choice3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kisumu"
-            android:onClick="onCountryButtonClicked"/>
+            android:text="Kisumu"/>
 
         <RadioButton
             android:id="@+id/city_choice4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nanyuki"
-            android:onClick="onCountryButtonClicked"/>
-
-
+            android:text="Nanyuki"/>
 
     </RadioGroup>
 
-    <TextView
+    <Button
+        android:id="@+id/button_set_question1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_weight="0.14"
+        android:onClick="onQ1Click"
+        android:text="@string/submit"/>
+
+  <!--  <TextView
         android:id="@+id/question_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -164,32 +157,29 @@
             android:id="@+id/logo_choice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/ic_launcher"
+            android:button="@mipmap/ic_launcher"
             android:onClick="onLogoButtonClicked"/>
 
         <RadioButton
             android:id="@+id/logo_choice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/ic_launcher"
+            android:button="@mipmap/ic_launcher"
             android:onClick="onLogoButtonClicked"/>
 
         <RadioButton
             android:id="@+id/logo_choice3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/ic_launcher"
+            android:button="@mipmap/ic_launcher"
             android:onClick="onLogoButtonClicked"/>
 
         <RadioButton
             android:id="@+id/logo_choice4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/ic_launcher"
+            android:button="@mipmap/ic_launcher"
             android:onClick="onLogoButtonClicked"/>
-
-
-
     </RadioGroup>
 
     <TextView
@@ -362,9 +352,9 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_below="@id/capital_city" />
-
+-->
 </LinearLayout>
-</ScrollView>
+    </RelativeLayout>
 
 
 
