@@ -3,4 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/question_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_text"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:text="2.What is your favourite animal?"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group1"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/animal_choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lion" />
+
+        <RadioButton
+            android:id="@+id/animal_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elephant"
+            android:onClick="onAnimalButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/animal_choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leopard"
+            android:onClick="onAnimalButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/animal_choice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiger"
+            android:onClick="onAnimalButtonClicked"/>
+
+
+
+    </RadioGroup>
 </LinearLayout>
